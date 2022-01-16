@@ -1,0 +1,99 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     @delay_ms1.P1
+021-024 atan2.y
+021     LCD_GOTO_XY.x
+021     SETUP_I2C_LCD.@SCRATCH1
+021     @PSTRINGC7_773.@SCRATCH1
+022     LCD_GOTO_XY.y
+022     @PSTRINGC7_773.@SCRATCH2
+023     LCD_GOTO_XY.@SCRATCH1
+023     @PSTRINGC7_773.@SCRATCH3
+024     LCD_I2C_DATA.MHT
+024     LCD_I2C_COMMAND.MDK
+024     @PSTRINGC7_773.@SCRATCH4
+025     LCD_I2C_DATA.MS_BIT_E
+025     LCD_I2C_COMMAND.MS_BIT_E
+025-028 atan2.x
+026     LCD_I2C_COMMAND.LS_BIT_E
+026     LCD_I2C_DATA.LS_BIT_E
+027     LCD_I2C_DATA.MS_DATA
+027     LCD_I2C_COMMAND.MS_DATA
+028     LCD_I2C_COMMAND.LS_DATA
+028     LCD_I2C_DATA.LS_DATA
+029     @I2C_WRITE_1.P1
+029-02C atan2.z
+029     LCD_I2C_COMMAND.@SCRATCH1
+029     LCD_I2C_DATA.@SCRATCH1
+02A     @delay_us1.P1
+02D.0   atan2.sign
+02E     atan2.quad
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_VITRI.call
+000008  LCD_VITRI.data
+00000C  @const789.call
+000013  @const791.call
+00001A  @const792.call
+000021  @I2C_WRITE_1
+00007D  @delay_us1
+00008C  LCD_I2C_COMMAND
+0000F1  @delay_ms1
+000105  SETUP_I2C_LCD
+000168  LCD_I2C_DATA
+0001CF  @PSTRINGC7_773
+000225  LCD_GOTO_XY
+000235  @cinit1
+000235  MAIN
+000249  @cinit2
+
+Project Directory:
+    D:\Coding-Project-Iot_electronic_embedded\PIC\Pic_I2C\code\
+
+Project Files:
+    main.c                                                  [16-Thg1-22 21:39  CRC=D8102B21]
+    main.h                                                  [16-Thg1-22 21:10  CRC=64D0046D]
+    C:\Program Files (x86)\PICC\Devices\16F887.h            [12-Thg11-13 14:35  CRC=6CB1A611]
+    C:\Program Files (x86)\PICC\Drivers\math.h              [28-Thg9-12 11:35  CRC=546412C9]
+    I2C_LCD.c                                               [16-Thg1-22 21:16  CRC=FE4D2917]
+
+Source signature=FA903A96
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
